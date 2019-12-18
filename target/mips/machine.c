@@ -289,6 +289,8 @@ const VMStateDescription vmstate_mips_cpu = {
         VMSTATE_INT32(env.CP0_Config1, MIPSCPU),
         VMSTATE_INT32(env.CP0_Config2, MIPSCPU),
         VMSTATE_INT32(env.CP0_Config3, MIPSCPU),
+        VMSTATE_INT32(env.CP0_Config4, MIPSCPU),
+        VMSTATE_INT32(env.CP0_Config5, MIPSCPU),
         VMSTATE_INT32(env.CP0_Config6, MIPSCPU),
         VMSTATE_INT32(env.CP0_Config7, MIPSCPU),
         VMSTATE_UINT64(env.CP0_LLAddr, MIPSCPU),

@@ -13,11 +13,17 @@ PCIBus *gt64120_register(qemu_irq *pic);
 /* bonito.c */
 PCIBus *bonito_init(qemu_irq *pic);
 
+/* ls7a.c */
+PCIBus *ls7a_init(qemu_irq *pic);
+
 /* rc4030.c */
 typedef struct rc4030DMAState *rc4030_dma;
 void rc4030_dma_read(void *dma, uint8_t *buf, int len);
 void rc4030_dma_write(void *dma, uint8_t *buf, int len);
 
 DeviceState *rc4030_init(rc4030_dma **dmas, IOMMUMemoryRegion **dma_mr);
+
+/* common.c */
+int mips_kvm_type(MachineState *machine, const char *vm_type);
 
 #endif
